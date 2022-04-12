@@ -24,7 +24,8 @@
       "@pages/*": ["pages/*"],
       "@public/*": ["public/*"],
       "@store/*": ["store/*"],
-      "@styles/*": ["styles/*"]
+      "@styles/*": ["styles/*"],
+      "@fallback/*": ["fallback/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

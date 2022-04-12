@@ -21,3 +21,4 @@ yarn dev
 4. bug - bug identified
 5. style - styles updated
 6. doc - documentation change
+7. test - added tests

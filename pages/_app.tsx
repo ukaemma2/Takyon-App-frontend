@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 import { Fragment } from "react";
 import Head from "next/head";
+import AuthProvider from "@context/AuthContext";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -22,9 +23,12 @@ function MyApp({ Component, pageProps }: AppProps) {
         <title>Takyon</title>
       </Head>
       {/* <QueryClientProvider client={queryClient}> */}
+      <AuthProvider>
       <Component {...pageProps} />
+      </AuthProvider>
       {/* <ReactQueryDevtools initialIsOpen /> */}
       {/* </QueryClientProvider> */}
+  
     </Fragment>
   );
 }

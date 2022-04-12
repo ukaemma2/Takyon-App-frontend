@@ -1,4 +1,4 @@
-import { Container } from '@material-ui/core'
+
 import Image from 'next/image'
 import React from 'react'
 import styles from './Header.module.css'
@@ -7,7 +7,7 @@ import styles from './Header.module.css'
 
 export default function Header() {
   return (
-    <Container fluid="true" >
+    <container fluid="true" >
       <nav className={styles.header_container}>
         <div className={styles.logo}>
         <Image src={'/logo.svg'} width={100} height={50} alt='arrow' />
@@ -26,6 +26,6 @@ export default function Header() {
           <Image src={'/logo.svg'} width={100} height={50} alt='arrow' />
         </div> 
       </nav>
-    </Container>
+    </container>
   )
 }

@@ -1,5 +1,7 @@
 import MainLayout from "@layout/main.layout";
 
 export default function Home() {
-  return <MainLayout>Home</MainLayout>;
+  return <MainLayout>
+    
+  </MainLayout>;
 }

@@ -1,6 +1,10 @@
 import Link from "next/link";
+import Image from 'next/image'
 import React, { Fragment } from "react";
 import { IoMdClose, IoIosMenu } from "react-icons/io";
+import logo from './../public/logo.svg';
+import menue from './../public/menu.svg';
+
 
 type MobileHeaderProps = {
   openMenu: boolean;
@@ -14,12 +18,12 @@ export default function MobileHeader({
     <Fragment>
       {!openMenu && (
         <header className="tw-flex tw-justify-between">
-          <h2>Takyon</h2>
+         <Image src={logo} width={0} height={50} alt='logo' />
           <button
             className="tw-bg-takyon-blue-100 tw-rounded-full tw-p-1"
             onClick={() => setOpenMenu(true)}
           >
-            <IoIosMenu color="white" />
+            <Image src={menue} width={0} height={50} alt='menue' />
           </button>
         </header>
       )}

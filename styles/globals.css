@@ -4,7 +4,7 @@
 
 html,
 body {
-  background: #141d41;
+  background: #141d41 !important;
   padding: 0;
   margin: 0;
   color: white;
@@ -12,11 +12,12 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-a {
-  color: inherit;
+a { 
+  color: inherit; 
   text-decoration: none;
 }
 
 * {
   box-sizing: border-box;
 }
+ 

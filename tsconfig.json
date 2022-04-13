@@ -28,6 +28,6 @@
       "@fallback/*": ["fallback/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/login/Login.jsx", "components/header/Header.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }

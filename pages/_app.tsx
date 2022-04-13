@@ -14,10 +14,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="takyon - home" content="Takyon homepage" />
         <title>Takyon - Home</title>
       </Head>
-      <QueryClientProvider client={queryClient}>
-        <Component {...pageProps} />
-        <ReactQueryDevtools initialIsOpen />
-      </QueryClientProvider>
+      <Component {...pageProps} />
+      <ReactQueryDevtools initialIsOpen />
     </Fragment>
   );
 }

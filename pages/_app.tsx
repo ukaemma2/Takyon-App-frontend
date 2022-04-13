@@ -4,7 +4,9 @@ import Head from "next/head";
 import { QueryClientProvider, QueryClient } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 import { Fragment } from "react";
-import AuthProvider from "@context/AuthContext";
+
+function MyApp({ Component, pageProps }: AppProps) {
+  const queryClient = new QueryClient();
 
   return (
     <Fragment>
@@ -12,15 +14,10 @@ import AuthProvider from "@context/AuthContext";
         <meta name="takyon - home" content="Takyon homepage" />
         <title>Takyon - Home</title>
       </Head>
-
-
       <QueryClientProvider client={queryClient}>
-        <AuthProvider>
         <Component {...pageProps} />
-            </AuthProvider>
         <ReactQueryDevtools initialIsOpen />
       </QueryClientProvider>
-
     </Fragment>
   );
 }

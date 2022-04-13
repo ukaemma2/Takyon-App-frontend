@@ -2,9 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: #000624;
+}
+
 @layer components {
   .btn {
-    @apply tw-rounded-3xl tw-py-1.5 tw-px-5 tw-font-bold tw-text-sm;
+    @apply tw-rounded-3xl tw-py-1.5 tw-px-5 tw-font-bold tw-text-sm tw-text-white tw-capitalize hover:tw-opacity-50;
   }
 
   .blue-button {
@@ -17,6 +21,14 @@
 
   .white-button {
     @apply tw-bg-white tw-text-takyon-blue-100;
+  }
+
+  .active-link {
+    @apply tw-text-white tw-font-bold tw-border-b-2 tw-border-takyon-blue-100 hover:tw-opacity-50;
+  }
+
+  .link {
+    @apply tw-text-gray-500 tw-capitalize tw-font-medium hover:tw-opacity-50;
   }
 }
 

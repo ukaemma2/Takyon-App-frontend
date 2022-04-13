@@ -1,5 +1,4 @@
 import React from "react";
-import { Alert, AlertTitle } from "@mui/material";
 
 type InfoProps = {
   type: "error" | "info" | "success" | "warning";
@@ -7,10 +6,5 @@ type InfoProps = {
   message: string;
 };
 export default function Info({ type, name, message }: InfoProps) {
-  return (
-    <Alert severity={type}>
-      <AlertTitle>{name}</AlertTitle>
-      {message}
-    </Alert>
-  );
+  return <div></div>;
 }

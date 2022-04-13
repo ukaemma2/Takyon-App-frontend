@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React, { Fragment } from "react";
 import { IoMdClose, IoIosMenu } from "react-icons/io";
@@ -12,17 +13,38 @@ export default function MobileHeader({
 }: MobileHeaderProps) {
   return (
     <Fragment>
-      {!openMenu && (
-        <header className="tw-flex tw-justify-between">
-          <h2>Takyon</h2>
-          <button
-            className="tw-bg-takyon-blue-100 tw-rounded-full tw-p-1"
-            onClick={() => setOpenMenu(true)}
-          >
-            <IoIosMenu color="white" />
-          </button>
-        </header>
-      )}
+      <header className="tw-flex tw-justify-between tw-pt-6 tw-px-4 md:tw-pt-10 md:tw-px-10 tw-border-b-2 tw-border-takyon-border">
+        <Image src="/takyon-logo.svg" alt="takyon" width={150} height={50} />
+        <nav className="md:tw-flex tw-justify-around tw-hidden tw-self-baseline">
+          <Link href="/">
+            <a className="active-link tw-mr-3">Explore</a>
+          </Link>
+          <Link href="/">
+            <a className="link tw-mr-3">secondary market</a>
+          </Link>
+          <Link href="/">
+            <a className="link tw-mr-3">super stays</a>
+          </Link>
+          <Link href="/">
+            <a className="link">about us</a>
+          </Link>
+        </nav>
+        <nav className="md:tw-flex tw-justify-around tw-hidden tw-self-baseline">
+          <Link href="/login">
+            <a className="btn">log in</a>
+          </Link>
+          <Link href="/login">
+            <a className="btn blue-button">sign up</a>
+          </Link>
+        </nav>
+        <button
+          className="tw-bg-takyon-blue-100 tw-rounded-full tw-p-1 tw-flex md:tw-hidden tw-self-baseline"
+          onClick={() => setOpenMenu(true)}
+        >
+          <IoIosMenu color="white" size="28" />
+        </button>
+      </header>
+      )
       {openMenu && (
         <header className="tw-bg-takyon-blue-100 tw-fixed tw-top-0 tw-right-0 tw-left-0 tw-bottom-0 tw-p-4">
           <button
@@ -64,14 +86,12 @@ export default function MobileHeader({
             </div>
             <div className="tw-flex tw-justify-center">
               <Link href="/login">
-                <a className="btn border-button tw-text-white tw-capitalize tw-mr-3 hover:tw-opacity-50">
+                <a className="btn border-button tw-text-white tw-mr-3">
                   log in
                 </a>
               </Link>
               <Link href="/sign-up">
-                <a className="btn white-button tw-capitalize tw-ml-3 hover:tw-opacity-50">
-                  sign up
-                </a>
+                <a className="btn white-button tw-ml-3">sign up</a>
               </Link>
             </div>
           </nav>

@@ -1,15 +1,8 @@
-import  PrivateRoute  from '@auth/PrivateRoute'
-import React from 'react'
-
+import PrivateRoute from "@auth/PrivateRoute";
+import React from "react";
 
 
 function Dashboard() {
-   
- 
-  return (
-    <div>
-    Dashboard
-    </div>
-  )
+  return <div>Dashboard</div>;
 }
 export default PrivateRoute(Dashboard);

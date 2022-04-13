@@ -7,6 +7,9 @@ module.exports = {
     "./shared/**/*.{ts,tsx}",
   ],
   theme: {
+    container: {
+      center: true
+    },
     extend: {},
   },
   plugins: [],

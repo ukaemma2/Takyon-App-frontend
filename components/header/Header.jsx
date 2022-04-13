@@ -7,7 +7,7 @@ import styles from './Header.module.css'
 
 export default function Header() {
   return (
-    <container fluid="true" >
+    <div className="md:container md:mx-auto"> 
       <nav className={styles.header_container}>
         <div className={styles.logo}>
         <Image src={'/logo.svg'} width={100} height={50} alt='arrow' />
@@ -26,6 +26,6 @@ export default function Header() {
           <Image src={'/logo.svg'} width={100} height={50} alt='arrow' />
         </div> 
       </nav>
-    </container>
+    </div>
   )
 }

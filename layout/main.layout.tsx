@@ -1,4 +1,3 @@
-import Header from "@components/Header";
 import MobileHeader from "@components/MobileHeader";
 import React, { Fragment, useState } from "react";
 
@@ -11,7 +10,6 @@ export default function MainLayout({ children }: MainLayoutProps) {
 
   return (
     <Fragment>
-      <Header setOpenMenu={setOpenMenu} />
       <MobileHeader openMenu={openMenu} setOpenMenu={setOpenMenu} />
       {children}
     </Fragment>

@@ -3,7 +3,7 @@
 ## CONTRIBUTING
 
 1. Clone the repository
-2. Create a branch highligting the feature you're working on
+2. Create a branch highligting the feature you're working on - branch names start with what you're doing e.g feat-login-page, fix-error-in-homepage
 3. commit using this structure - feat: added redux
 4. Yarn - to install and always pull from main before you push
 5. Push the branch to your fork

@@ -33,7 +33,7 @@ export default function MobileHeader({
           <Link href="/login">
             <a className="btn">log in</a>
           </Link>
-          <Link href="/login">
+          <Link href="/signup">
             <a className="btn blue-button">sign up</a>
           </Link>
         </nav>
@@ -90,7 +90,7 @@ export default function MobileHeader({
                   log in
                 </a>
               </Link>
-              <Link href="/sign-up">
+              <Link href="/signup">
                 <a className="btn white-button tw-ml-3">sign up</a>
               </Link>
             </div>

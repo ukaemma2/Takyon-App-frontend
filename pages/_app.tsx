@@ -1,29 +1,18 @@
 import "../styles/globals.scss";
 import type { AppProps } from "next/app";
-import { QueryClient, QueryClientProvider } from "react-query";
+import Head from "next/head";
+import { QueryClientProvider, QueryClient } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 import { Fragment } from "react";
-import Head from "next/head";
-
-const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      refetchOnWindowFocus: false,
-      cacheTime: 1000 * 60 * 20,
-      staleTime: Infinity,
-    },
-  },
-});
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const queryClient = new QueryClient();
+
   return (
     <Fragment>
       <Head>
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/icon?family=Material+Icons"
-        />
-        <title>Takyon</title>
+        <meta name="takyon - home" content="Takyon homepage" />
+        <title>Takyon - Home</title>
       </Head>
       <QueryClientProvider client={queryClient}>
         <Component {...pageProps} />

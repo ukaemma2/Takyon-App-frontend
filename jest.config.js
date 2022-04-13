@@ -15,6 +15,10 @@ const customJestConfig = {
   testEnvironment: "jest-environment-jsdom",
   moduleNameMapper: {
     "^@components/(.*)$": "<rootDir>/components/$1",
+    "^@pages/(.*)$": "<rootDir>/pages/$1",
+    "^@shared/(.*)$": "<rootDir>/shared/$1",
+    "^@layout/(.*)$": "<rootDir>/layout/$1",
+    "^@fallback/(.*)$": "<rootDir>/fallback/$1",
   },
 };
 

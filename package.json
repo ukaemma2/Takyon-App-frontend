@@ -13,17 +13,18 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
-    "@material-ui/core": "^4.12.4",
-    "@material-ui/icons": "^4.11.3",
-    "@types/react-router-dom": "^5.3.3",
     "axios": "^0.26.1",
     "next": "12.1.4",
     "react": "18.0.0",
     "react-dom": "18.0.0",
+    "react-icons": "^4.3.1",
+    "react-loader-spinner": "^6.0.0-0",
     "react-query": "^3.34.19",
     "sass": "^1.50.0"
   },
   "devDependencies": {
+    "@tailwindcss/forms": "^0.5.0",
+    "@tailwindcss/line-clamp": "^0.3.1",
     "@testing-library/cypress": "^8.0.2",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.0.0",
@@ -43,6 +44,9 @@
     "typescript": "4.6.3"
   },
   "lint-staged": {
-    "**/*.{ts,tsx}": []
+    ".{ts,tsx}": [
+      "yarn lint",
+      "yarn test"
+    ]
   }
 }

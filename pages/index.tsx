@@ -1,11 +1,10 @@
-import Login from "../components/login/Login";
-
+import MainLayout from "@layout/main.layout";
+import Welcome from "@components/home/Welcome";
 
 export default function Home() {
   return (
-  <div>
-    <Login />
-  </div>
-    
-  )
+    <MainLayout>
+      <Welcome />
+    </MainLayout>
+  );
 }

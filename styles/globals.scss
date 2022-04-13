@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply tw-rounded-3xl tw-py-1.5 tw-px-5 tw-font-bold tw-text-sm;
+  }
+
+  .blue-button {
+    @apply tw-bg-takyon-blue-100;
+  }
+
+  .border-button {
+    @apply tw-border-2 tw-border-takyon-light-100;
+  }
+
+  .white-button {
+    @apply tw-bg-white tw-text-takyon-blue-100;
+  }
+}
+
+button {
+  &:hover {
+    opacity: 0.5;
+  }
+}

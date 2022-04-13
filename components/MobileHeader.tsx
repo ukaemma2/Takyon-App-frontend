@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { Fragment } from "react";
 import { IoMdClose, IoIosMenu } from "react-icons/io";
+import style from "./header.module.scss";
 
 type MobileHeaderProps = {
   openMenu: boolean;
@@ -13,40 +14,42 @@ export default function MobileHeader({
 }: MobileHeaderProps) {
   return (
     <Fragment>
-      <header className="tw-flex tw-justify-between tw-pt-6 tw-px-4 md:tw-pt-10 md:tw-px-10 tw-border-b-2 tw-border-takyon-border">
-        <Image src="/takyon-logo.svg" alt="takyon" width={150} height={50} />
-        <nav className="md:tw-flex tw-justify-around tw-hidden tw-self-baseline">
-          <Link href="/">
-            <a className="active-link tw-mr-3">Explore</a>
-          </Link>
-          <Link href="/">
-            <a className="link tw-mr-3">secondary market</a>
-          </Link>
-          <Link href="/">
-            <a className="link tw-mr-3">super stays</a>
-          </Link>
-          <Link href="/">
-            <a className="link">about us</a>
-          </Link>
-        </nav>
-        <nav className="md:tw-flex tw-justify-around tw-hidden tw-self-baseline">
-          <Link href="/login">
-            <a className="btn">log in</a>
-          </Link>
-          <Link href="/signup">
-            <a className="btn blue-button">sign up</a>
-          </Link>
-        </nav>
-        <button
-          className="tw-bg-takyon-blue-100 tw-rounded-full tw-p-1 tw-flex md:tw-hidden tw-self-baseline"
-          onClick={() => setOpenMenu(true)}
-        >
-          <IoIosMenu color="white" size="28" />
-        </button>
-      </header>
+      <div className={style.headerBorderWrapper}>
+        <header className="wrapper tw-flex tw-justify-between tw-pt-6 tw-pb-2 tw-px-4 md:tw-pt-10 md:tw-px-10 tw-bg-takyon-blue-300">
+          <Image src="/takyon-logo.svg" alt="takyon" width={150} height={50} />
+          <nav className="md:tw-flex tw-justify-around tw-hidden tw-self-baseline">
+            <Link href="/">
+              <a className="active-link tw-mr-3">Explore</a>
+            </Link>
+            <Link href="/">
+              <a className="link tw-mr-3">secondary market</a>
+            </Link>
+            <Link href="/">
+              <a className="link tw-mr-3">super stays</a>
+            </Link>
+            <Link href="/">
+              <a className="link">about us</a>
+            </Link>
+          </nav>
+          <nav className="md:tw-flex tw-justify-around tw-hidden tw-self-baseline">
+            <Link href="/login">
+              <a className="btn">log in</a>
+            </Link>
+            <Link href="/signup">
+              <a className="btn blue-button">sign up</a>
+            </Link>
+          </nav>
+          <button
+            className="tw-bg-takyon-blue-100 tw-rounded-full tw-p-1 tw-flex md:tw-hidden tw-self-baseline"
+            onClick={() => setOpenMenu(true)}
+          >
+            <IoIosMenu color="white" size="28" />
+          </button>
+        </header>
+      </div>
       )
       {openMenu && (
-        <header className="tw-bg-takyon-blue-100 tw-fixed tw-top-0 tw-right-0 tw-left-0 tw-bottom-0 tw-p-4">
+        <header className="tw-bg-takyon-blue-100 tw-fixed tw-top-0 tw-right-0 tw-left-0 tw-bottom-0 tw-p-4 tw-z-10">
           <button
             className="tw-flex tw-justify-end tw-w-full"
             onClick={() => setOpenMenu(false)}

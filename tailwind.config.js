@@ -5,7 +5,7 @@ module.exports = {
     "./components/**/*.{ts,tsx}",
     "./layout/**/*.{ts,tsx}",
     "./shared/**/*.{ts,tsx}",
-    "./fallback/**/*.{ts. tsx}",
+    "./fallback/**/*.{ts,tsx}",
   ],
   theme: {
     extend: {

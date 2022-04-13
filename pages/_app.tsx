@@ -17,6 +17,7 @@ const queryClient = new QueryClient({
 });
 
 function MyApp({ Component, pageProps }: AppProps) {
+
   return (
     <Fragment>
       <Head>

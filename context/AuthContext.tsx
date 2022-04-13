@@ -9,12 +9,12 @@ const AuthProvider: React.FC<PropsWithChildren<{}>> = ({ children }) => {
 
   function signup() {
     return {
-      size: "fish",
+      auth: "used sigup",
     };
   }
   function login() {
     return {
-      size: "fish",
+      auth: "used login",
     };
   }
   

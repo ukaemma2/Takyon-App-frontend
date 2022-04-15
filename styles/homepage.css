@@ -1,0 +1,8 @@
+.md_none {
+  display: none
+}
+@media screen  and (max-width: 600px){
+  .md_none {
+      display: none
+  }
+}

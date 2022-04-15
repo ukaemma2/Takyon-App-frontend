@@ -18,12 +18,14 @@ export default function MobileHeader({
     <Fragment>
       {!openMenu && (
         <header className="tw-flex tw-justify-between">
-         <Image src={logo} width={0} height={50} alt='logo' />
+         <Image src={logo} width={100} height={50} alt='logo' />
           <button
             className="tw-bg-takyon-blue-100 tw-rounded-full tw-p-1"
             onClick={() => setOpenMenu(true)}
           >
-            <Image src={menue} width={0} height={50} alt='menue' />
+            <Image 
+              className="md_none" 
+              src={menue} width={0} height={60} alt='menue' />
           </button>
         </header>
       )}

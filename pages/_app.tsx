@@ -1,5 +1,6 @@
 import "../styles/globals.scss";
 import "../styles/globals.css";
+import "../styles/homepage.css";
 import type { AppProps } from "next/app";
 import { Fragment } from "react";
 import Head from "next/head";
